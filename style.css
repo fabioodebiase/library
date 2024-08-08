@@ -1,0 +1,56 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.libreria-container{
+    display:flex;
+    justify-content: center;
+    
+    align-items: center;
+}
+
+.card{
+
+    background-color: white;
+    border:2px solid black;
+    gap: 10px;
+    border-radius: 5px;
+    /* box-shadow:5px 5px 5px 5px #888888 ; */
+    padding:20px
+}
+
+.card h1{
+    padding:5px;
+    margin-bottom:5px;
+    text-align:center
+}
+
+.card .libro-input{
+    margin-right:10px;
+    width:300px;
+    height: 40px;
+}
+
+.card #btn{
+    width:120px;
+    height: 40px;
+    border-radius:5px
+}
+
+
+#list-container li{
+    text-align: center;
+    list-style: none;
+}

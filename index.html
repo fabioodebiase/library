@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class = "container">
+        <div class = "libreria-container">
+            <div class = "card">
+                <h1>Benvenuto!</h1>
+                <input type="text" placeholder="Inserisci il titolo..." id="titolo" class = "libro-input">
+                <input type="text" placeholder="Inserisci l'autore..." id="autore" class = "libro-input">
+                <input type="text" placeholder="Inserisci il codice isbn..." id="isbn" class = "libro-input">
+                <input type="button" value="Inserisci" id = "btn">
+
+                <div class = "libri-list">
+                    <h1>Lista</h1>
+                        <ul id = "list-container">
+
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
