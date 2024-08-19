@@ -12,6 +12,20 @@ class Libro{
         this.isbn = isbn
     }
 
+    salvaLibro(obj){
+        
+        if (localStorage.getItem("Libri")) {
+            obj = JSON.parse(localStorage.getItem("Libri"));
+        } else {
+            obj = [];
+        }
+        obj.push({titolo:this.titolo,autore:this.autore,isbn:this.isbn})
+        localStorage.setItem("Libri", JSON.stringify(obj))
+       
+        
+        
+    }
+
 
     inserisciLibro(){
        let list = document.createElement("li");
@@ -20,11 +34,11 @@ class Libro{
        
     }
 }
-    let libro = new Libro(titolo.value,autore.value,isbn.value)
+    
         button.addEventListener('click',function(){
+        let libro = new Libro(titolo.value,autore.value,isbn.value)
+        libro.salvaLibro(libro)
         libro.inserisciLibro();
     })
-    
-
 
 
