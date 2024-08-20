@@ -21,24 +21,25 @@ class Libro{
         }
         obj.push({titolo:this.titolo,autore:this.autore,isbn:this.isbn})
         localStorage.setItem("Libri", JSON.stringify(obj))
-       
-        
         
     }
 
+   viewLibro(obj){
+        obj = JSON.parse(localStorage.getItem("Libri"))
+        listContainer.innerHTML = ""
+        for(let i = 0; i < obj.length; i ++){
+            let list = document.createElement("li");
+            list.innerHTML = `Titolo: ${obj[i].titolo}  Autore: ${obj[i].autore} Codice ISBN: ${obj[i].isbn}`;
+            listContainer.appendChild(list)
+        }
+   }
 
-    inserisciLibro(){
-       let list = document.createElement("li");
-       list.innerHTML = `Titolo: ${titolo.value}  Autore: ${autore.value} Codice ISBN: ${isbn.value}`;
-       listContainer.appendChild(list)
-       
-    }
 }
     
         button.addEventListener('click',function(){
         let libro = new Libro(titolo.value,autore.value,isbn.value)
         libro.salvaLibro(libro)
-        libro.inserisciLibro();
+        libro.viewLibro(libro);
     })
-
+    
 
